@@ -13,24 +13,6 @@ module.exports = {
     ignoreDuringBuilds: false,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "www.evc.de",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn-icons-png.flaticon.com",
-      },
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-      },
-      {
-        protocol: "https",
-        hostname: "vtectesting.duckdns.org",
-        pathname: "/img/**", 
-      },
-    ],
+    domains: ['www.evc.de', 'cdn-icons-png.flaticon.com', 'res.cloudinary.com','vtectesting.duckdns.org'],
   },
 };
