@@ -17,7 +17,7 @@ const BlogDetails = ({ id }) => {
       if (!postId) return; // Prevent API call if id is not available
       try {
         const response = await axios.get(
-          `https://back-end.topspeed-performance.de/api/blog-post-details/${postId}`
+          `https://vtecbackend.duckdns.org/api/blog-post-details/${postId}`
         );
         setBlogPostData(response.data);
       } catch (err) {

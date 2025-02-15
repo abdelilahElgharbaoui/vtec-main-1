@@ -25,7 +25,7 @@ const MyCar = () => {
     const fetchCategories = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicle/categories');
+        const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicle/categories');
         const sortedCategories = response.data.sort((a, b) =>
           a.category_name.localeCompare(b.category_name)
         );
@@ -46,7 +46,7 @@ const MyCar = () => {
       if (selectedCategory !== null) {
         try {
           setIsLoading(true);
-          const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicles/names', {
+          const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicles/names', {
             params: { category_id: selectedCategory },
           });
           const sortedBrands = response.data.sort((a, b) =>
@@ -72,7 +72,7 @@ const MyCar = () => {
       if (selectedCategory && selectedBrand) {
         try {
           setIsLoading(true);
-          const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicles/models', {
+          const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicles/models', {
             params: { brand_id: selectedBrand, category_id: selectedCategory },
           });
           const sortedModels = response.data.sort((a, b) =>
@@ -98,7 +98,7 @@ const MyCar = () => {
       if (selectedModel) {
         try {
           setIsLoading(true);
-          const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicles/generations', {
+          const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicles/generations', {
             params: { model_id: selectedModel },
           });
           const sortedGenerations = response.data.sort((a, b) =>
@@ -124,7 +124,7 @@ const MyCar = () => {
       if (selectedGeneration) {
         try {
           setIsLoading(true);
-          const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicles/engines', {
+          const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicles/engines', {
             params: {
               generation_id: selectedGeneration,
               model_id: selectedModel,
@@ -155,7 +155,7 @@ const MyCar = () => {
       if (selectedEngine) {
         try {
           setIsLoading(true);
-          const response = await axios.get('https://back-end.topspeed-performance.de/api/vehicles/ecus', {
+          const response = await axios.get('https://vtecbackend.duckdns.org/api/vehicles/ecus', {
             params: {
               engine_id: selectedEngine,
               generation_id: selectedGeneration,

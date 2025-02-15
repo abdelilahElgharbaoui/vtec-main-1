@@ -20,7 +20,7 @@ const ContactArch = () => {
     setButtonText("Sending..."); // Change button text while sending
 
     try {
-      const response = await fetch("https://back-end.topspeed-performance.de/api/send-partner-request", {
+      const response = await fetch("https://vtecbackend.duckdns.org/api/send-partner-request", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

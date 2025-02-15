@@ -24,7 +24,7 @@ const NavbarFullMenu = ({ theme }) => {
       }
 
       const response = await axios.post(
-        "https://back-end.topspeed-performance.de/api/logout",
+        "https://vtecbackend.duckdns.org/api/logout",
         {},
         {
           headers: {

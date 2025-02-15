@@ -56,7 +56,7 @@ const MyCar = () => {
       try {
         setIsLoading(true);
         const response = await axios.get(
-          "https://back-end.topspeed-performance.de/api/vehicle/categories"
+          "https://vtecbackend.duckdns.org/api/vehicle/categories"
         );
         const sortedCategories = response.data.sort((a, b) =>
           a.category_name.localeCompare(b.category_name)
@@ -79,7 +79,7 @@ const MyCar = () => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "https://back-end.topspeed-performance.de/api/vehicle/brands",
+            "https://vtecbackend.duckdns.org/api/vehicle/brands",
             {
               params: { category_id: selectedCategory },
             }
@@ -108,7 +108,7 @@ const MyCar = () => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "https://back-end.topspeed-performance.de/api/vehicles/models",
+            "https://vtecbackend.duckdns.org/api/vehicles/models",
             {
               params: {
                 brand_id: selectedBrand,
@@ -140,7 +140,7 @@ const MyCar = () => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "https://back-end.topspeed-performance.de/api/vehicles/generations",
+            "https://vtecbackend.duckdns.org/api/vehicles/generations",
             {
               params: { model_id: selectedModel },
             }
@@ -169,7 +169,7 @@ const MyCar = () => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "https://back-end.topspeed-performance.de/api/vehicles/engines",
+            "https://vtecbackend.duckdns.org/api/vehicles/engines",
             {
               params: {
                 generation_id: selectedGeneration,
@@ -203,7 +203,7 @@ const MyCar = () => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "https://back-end.topspeed-performance.de/api/vehicles/ecus",
+            "https://vtecbackend.duckdns.org/api/vehicles/ecus",
             {
               params: {
                 engine_id: selectedEngine,

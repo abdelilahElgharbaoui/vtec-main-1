@@ -21,7 +21,7 @@ const UploadBlogDetails = ({ id }) => {
     const fetchBlogDetails = async () => {
       try {
         const response = await axios.get(
-          `https://back-end.topspeed-performance.de/api/blog-posts/${id}`
+          `https://vtecbackend.duckdns.org/api/blog-posts/${id}`
         );
         if (response.data) {
           setBlogExists(true);
@@ -105,8 +105,8 @@ const UploadBlogDetails = ({ id }) => {
     try {
       const response = await axios.post(
         blogExists
-          ? `https://back-end.topspeed-performance.de/api/blog-posts/${id}/update`
-          : "https://back-end.topspeed-performance.de/api/blog-posts-new",
+          ? `https://vtecbackend.duckdns.org/api/blog-posts/${id}/update`
+          : "https://vtecbackend.duckdns.org/api/blog-posts-new",
         formData,
         {
           headers: {
@@ -132,7 +132,7 @@ const UploadBlogDetails = ({ id }) => {
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `https://back-end.topspeed-performance.de/api/blog-posts/${id}`
+        `https://vtecbackend.duckdns.org/api/blog-posts/${id}`
       );
       if (response.status === 200) {
         setMessage("Blog post deleted successfully!");

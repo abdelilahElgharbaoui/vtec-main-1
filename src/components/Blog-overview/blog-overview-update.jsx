@@ -18,7 +18,7 @@ const UpdateBlogOverview = ({ blogId }) => {
     const fetchBlogOverview = async () => {
       try {
         const response = await axios.get(
-          `https://back-end.topspeed-performance.de/api/blog-overview/${blogId}`
+          `https://vtecbackend.duckdns.org/api/blog-overview/${blogId}`
         );
         setBlogOverview({
           main_title: response.data.main_title,
@@ -69,7 +69,7 @@ const UpdateBlogOverview = ({ blogId }) => {
     e.preventDefault();
 
     try {
-      await axios.put(`https://back-end.topspeed-performance.de/api/blog-overview/${blogId}`, {
+      await axios.put(`https://vtecbackend.duckdns.org/api/blog-overview/${blogId}`, {
         main_title: blogOverview.main_title,
         main_image: blogOverview.main_image_url, // Send the Cloudinary image URL
       });

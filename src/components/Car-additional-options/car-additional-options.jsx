@@ -12,7 +12,7 @@ const CarAdditionalOptions = ({ additionalOptions }) => {
     if (vehicleId && tuningIds.length > 0) {
       const fetchCharacteristics = async () => {
         try {
-          const response = await axios.post("https://back-end.topspeed-performance.de/api/vehicle-characteristics", {
+          const response = await axios.post("https://vtecbackend.duckdns.org/api/vehicle-characteristics", {
             vehicle_id: vehicleId,
             vehicle_tuning_ids: tuningIds,
           });

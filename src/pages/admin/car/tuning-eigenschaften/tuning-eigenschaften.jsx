@@ -24,7 +24,7 @@ const AddEigenschaftenByTuningID = () => {
     }
 
     try {
-      const response = await fetch('https://back-end.topspeed-performance.de/api/verify', {
+      const response = await fetch('https://vtecbackend.duckdns.org/api/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

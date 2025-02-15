@@ -13,7 +13,7 @@ const AddCharacteristic = () => {
   useEffect(() => {
     const fetchCharacteristics = async () => {
       try {
-        const response = await axios.get("https://back-end.topspeed-performance.de/api/characteristics");
+        const response = await axios.get("https://vtecbackend.duckdns.org/api/characteristics");
         setCharacteristics(response.data); // Store the fetched characteristics
       } catch (err) {
         console.error("Error fetching characteristics:", err);
@@ -59,7 +59,7 @@ const AddCharacteristic = () => {
     }
 
     try {
-      const response = await axios.post("https://back-end.topspeed-performance.de/api/add-characteristic", formData);
+      const response = await axios.post("https://vtecbackend.duckdns.org/api/add-characteristic", formData);
       setSuccess("Characteristic added successfully!");
       setName("");
       setImage(null);
