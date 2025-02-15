@@ -36,7 +36,7 @@ useEffect(() => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "http://127.0.0.1:8000/api/vehicle/categories-activate"
+        "https://vtecbackend.duckdns.org/api/vehicle/categories-activate"
       );
       const data = response.data;
 
@@ -78,7 +78,7 @@ useEffect(() => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "http://127.0.0.1:8000/api/vehicle/brands-activate",
+            "https://vtecbackend.duckdns.org/api/vehicle/brands-activate",
             {
               params: { category_id: selectedCategory },
             }
@@ -105,7 +105,7 @@ useEffect(() => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "http://127.0.0.1:8000/api/vehicle/models-activate",
+            "https://vtecbackend.duckdns.org/api/vehicle/models-activate",
             {
               params: { brand_id: selectedBrand },
             }
@@ -132,7 +132,7 @@ useEffect(() => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            `http://127.0.0.1:8000/api/vehicle/generations-activate`,
+            `https://vtecbackend.duckdns.org/api/vehicle/generations-activate`,
             {
               params: { model_id: selectedModel },
             }
@@ -159,7 +159,7 @@ useEffect(() => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            `http://127.0.0.1:8000/api/vehicle/engines-activate`,
+            `https://vtecbackend.duckdns.org/api/vehicle/engines-activate`,
             {
               params: { generation_id: selectedGeneration },
             }
@@ -186,7 +186,7 @@ useEffect(() => {
         try {
           setIsLoading(true);
           const response = await axios.get(
-            "http://127.0.0.1:8000/api/vehicle/ecus-activate", // Endpoint to fetch vehicles by engine ID
+            "https://vtecbackend.duckdns.org/api/vehicle/ecus-activate", // Endpoint to fetch vehicles by engine ID
             {
               params: { engine_id: selectedEngine },
             }
